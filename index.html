@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Popcorn</title>
+    <meta name="description" content="Create a vídeo using your pictures!">
+    <meta name="author" content="Camila Ayres">
+    <meta name="keywords" content="mlt, php">
+  </head>
+
+  <body>
+    <form enctype=multipart/form-data action="main.php" id="create-video" method="POST">
+        Choose the folder with your pictures: <br>
+        <input name="file[]" type="file" id="file0"/><br>
+        <input name="file[]" type="file" id="file1"/><br>
+        <input name="file[]" type="file" id="file2"/><br>
+        <input name="file[]" type="file" id="file3"/><br>
+        <input type="submit" value="Submit"/>
+    </form>  
+    <div id="files"></div>
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
