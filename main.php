@@ -1,17 +1,23 @@
 <?php
     
-    require 'Files.php';
-    require 'Video.php';
+//     require 'Files.php';
+//     require 'Video.php';
+
+    require 'MeltXml.php';
     
     $data = array();
     foreach ($_FILES['file']['name'] as $key => $name) {
         $name = $_FILES['file']['name'][$key];
         $tmp_name = $_FILES['file']['tmp_name'][$key];
         move_uploaded_file($tmp_name, './tmp/'.$name);
-        $data[$name] = $tmp_name;
+        $data[$name] = $name;
     }
+    
+    $xml = new MeltXml($data);
 //     $data[0] = $_FILES;
 //     $data[1] = $_POST;
+
+
     echo json_encode($data);
    
 //     $filename = $argv[1];
