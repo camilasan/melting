@@ -6,6 +6,7 @@
         
         public function __construct($content){
             $this->openURI('./tmp/mlt.xml');
+            //$this->openMemory();
             $this->setIndent(true);
             $this->setIndentString('    ');
             $this->startDocument('1.0', 'utf-8');
@@ -111,7 +112,7 @@
                     $this->endElement();
                 $this->endElement(); 
             $this->endDocument(); 
-            exec('cd ./tmp/ && melt6 mlt.xml --verbose');
+            exec('cd ./tmp/ && melt6 -producer xml:mlt.xml -consumer avformat:output.mp4');
         } 
 
     }
