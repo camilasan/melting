@@ -6,6 +6,13 @@ input[type='submit'],
 input[type='button'] {color:#00BFFF;background:#fff;width:150px;height:30px;border-radius:3px;margin:10px 0 10px 0;}
 input[type='file'],
 input[type='text'] {width:400px}
-input[type='file'] {position:relative;margin:10px auto;}
+/*input[type='file'] {position:relative;margin:10px auto;}*/
+input[type='button'] {color:#666;background:#f1f1f1;}
 
 #messages {background-color:#fff;color:#cc0000}
+
+.header {position:relative;margin:0 auto;width:50%;padding-top:30px;}
+.header img {margin-right:20px}
+.header h1 {padding-top:20px;font-weight:900}
+.form {width:50%;position:relative;margin:0 auto;padding-top:30px;}
+.inline-block {display:inline-block}

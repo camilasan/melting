@@ -8,7 +8,11 @@
         public function __construct($content, $title){
             $this->content = $content;
             $this->title = $title;
-            $this->openURI('./tmp/mlt.xml');
+            $this->processXML();
+        } 
+        
+        public function processXML(){
+            $this->openURI('./tmp/'.$this->title.'.xml');
             $this->setIndent(true);
             $this->setIndentString('    ');
             $this->startDocument('1.0', 'utf-8');
@@ -24,8 +28,8 @@
                     $this->endElement();
                 $this->endElement(); 
             $this->endDocument(); 
-            $this->publishVideo();
-        } 
+            $this->publishVideo();        
+        }
         
         public function setPlaylists(){
             $i = 0;

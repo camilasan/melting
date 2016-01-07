@@ -11,20 +11,25 @@
   </head>
   <body>
     <div class="container">
-        <div class="text-center">
-            <img src="img/popcorn-sm.png" /><br>
-            <br>
-            <div id="messages"></div>
-            <div id="video">
-                <form action="main.php" id="create-video" method="POST">
-                    1. Choose the pictures you want to use:<br>
-                    <input name="file[]" type="file" id="file" multiple="multiple"/><br>
-                    2. Choose a title to your video:<br>
-                    <input name="title" type="text" id="title"/><br>
-                    <input type="button" value="Reset" id="reset"/> <input type="submit" value="Submit"/>
-                </form> 
-            </div>
+        <div class="clearfix header">
+            <img src="img/popcorn-sm.png" class="pull-left"/> 
+            <span class="pull-left">
+                <h1>Popcorn<br></h1>
+                <small>Grab the Popcorn and create<br> a video with your pictures!</small>
+            </span>
         </div>
+        <div class="form clearfix">
+            <div id="messages"></div>
+            <form action="main.php" id="create-video" method="POST">
+                1. Give a name to your video:<br>
+                <input name="title" type="text" id="title"/><br>                
+                2. Choose the pictures you want to use:<br>
+                <input name="file[]" type="file" id="file" multiple="multiple"/><br>
+                3. Ready to go? <input type="submit" value="Create video"/><br>
+                Not quite sure... <input type="button" value="Clear fields" id="reset"/>
+            </form> 
+        </div>
+        <div id="video"></div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.form.js"></script>

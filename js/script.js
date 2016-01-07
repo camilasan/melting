@@ -38,7 +38,7 @@ function displayVideo(data){
     }
     
     if(data.video && !('file_error' in data || 'title_error' in data)){
-        $('#messages').html('');
+        $('#messages').html(data.title);
         $('#video').html(data.video);
     }
 }

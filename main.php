@@ -27,7 +27,8 @@
     
     if(!isset($data['title_error']) || !isset($data['file_error'])){
         $xml = new Mlt($images, $title);
-        $data['video'] = '<video width="320" height="240" controls><source src="tmp/'.$title.'.mp4" type="video/mp4"><source src="'.$title.'.mp4" type="video/mp4">Your browser does not support the video tag.</video>';
+        $data['title'] = $title;
+        $data['video'] = '<video width="600" height="400" controls><source src="tmp/'.$title.'.mp4" type="video/mp4"><source src="'.$title.'.mp4" type="video/mp4">Your browser does not support the video tag.</video>';
     }
     
     echo json_encode($data);
