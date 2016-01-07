@@ -9,7 +9,7 @@ input[type='text'] {width:400px}
 /*input[type='file'] {position:relative;margin:10px auto;}*/
 input[type='button'] {color:#666;background:#f1f1f1;}
 
-#messages {background-color:#fff;color:#cc0000}
+#messages {display:none;position:relative;margin:0 auto;width:50%;background-color:#fff;color:#cc0000;padding: 10px;margin: 30px auto 30px auto;}
 
 .header {position:relative;margin:0 auto;width:50%;padding-top:30px;}
 .header img {margin-right:20px}

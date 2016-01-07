@@ -18,9 +18,9 @@
                 <small>Grab the Popcorn and create<br> a video with your pictures!</small>
             </span>
         </div>
-        <div class="form clearfix">
-            <div id="messages"></div>
-            <form action="main.php" id="create-video" method="POST">
+        <div id="messages"></div>
+        <div class="form clearfix" id="video">
+            <form action="main.php" id="create-video" enctype="multipart/form-data" method="POST">
                 1. Give a name to your video:<br>
                 <input name="title" type="text" id="title"/><br>                
                 2. Choose the pictures you want to use:<br>
@@ -29,7 +29,6 @@
                 Not quite sure... <input type="button" value="Clear fields" id="reset"/>
             </form> 
         </div>
-        <div id="video"></div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.form.js"></script>

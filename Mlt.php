@@ -8,7 +8,6 @@
         public function __construct($content, $title){
             $this->content = $content;
             $this->title = $title;
-            $this->processXML();
         } 
         
         public function processXML(){
@@ -112,7 +111,7 @@
         }
         
         public function publishVideo(){
-            exec('cd ./tmp/ && melt6 -producer xml:mlt.xml -consumer avformat:'.$this->title.'.mp4');
+            exec('cd ./tmp/ && melt6 -producer xml:'.$this->title.'.xml -consumer avformat:'.$this->title.'.mp4');
         }        
     }
     
