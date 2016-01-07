@@ -1,0 +1,11 @@
+body {background-color:#00BFFF;font-size:18px;color:#fff;padding:30px;}
+input {border:0;}
+input[type='file'],
+input[type='text'],
+input[type='submit'],
+input[type='button'] {color:#00BFFF;background:#fff;width:150px;height:30px;border-radius:3px;margin:10px 0 10px 0;}
+input[type='file'],
+input[type='text'] {width:400px}
+input[type='file'] {position:relative;margin:10px auto;}
+
+#messages {background-color:#fff;color:#cc0000}
